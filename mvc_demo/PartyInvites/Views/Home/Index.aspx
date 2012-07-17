@@ -1,12 +1,22 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    홈 페이지
-</asp:Content>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: ViewData["Message"] %></h2>
-    <p>
-        ASP.NET MVC에 대한 자세한 내용을 보려면 <a href="http://asp.net/mvc" title="ASP.NET MVC 웹 사이트">http://asp.net/mvc</a>를 방문하십시오.
-    </p>
-</asp:Content>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <!-- 45 page
+        Hello, world (from the view)! -->
+        
+        <!-- 46 page -->
+        <%--<%=ViewData["greeting"] %>, world (from the view)!--%>
+
+
+
+
+    </div>
+</body>
+</html>
