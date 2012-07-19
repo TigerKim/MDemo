@@ -10,4 +10,8 @@ namespace DomainModel.Abstract
     {
         IQueryable<Product> Products { get; }
     }
+
+    public class IProductRepository
+    {
+    }
 }
