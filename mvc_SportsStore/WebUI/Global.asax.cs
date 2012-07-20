@@ -37,7 +37,7 @@ namespace WebUI
             RegisterRoutes(RouteTable.Routes);
 
             // 신규추가
-            ControllerBuilder.Current.SetControllerFactory(new WinsorControlerFactory());
+           ////// ControllerBuilder.Current.SetControllerFactory(new WinsorControlerFactory());
         }
     }
 }

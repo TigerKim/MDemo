@@ -14,9 +14,9 @@ namespace WebUI.Controllers
         //private string connectionString = @"Server=.\SQLExpress;Database=SportsStore;Trusted_Connection=yes;";
 
         private IProductsRepository productsRepository;
-        //public ProductsController ()
+        //public ProductsController()
         //{
-        //    //productsRepository = new FakeProductsRepository();
+        //    productsRepository = new FakeProductsRepository();
         //    productsRepository = new SqlProductsRepository(connectionString); // 140p
         //}
 
@@ -28,9 +28,21 @@ namespace WebUI.Controllers
             this.productsRepository = productsRepository;
         }
 
+
         public ActionResult List()
         {
             return View(productsRepository.Products.ToList());
+        }
+
+        public ActionResult List(int page)
+        {
+            int PageSize = 2;
+
+            int numProducts = productsRepository.Products.Count();
+            ViewData["TotalPages"] = (int)Math.Ceiling((double)numProducts / PageSize);
+            ViewData["CurrentPage"] = page;
+
+            return View(productsRepository.Products.Skip((page - 1) * PageSize).Take(PageSize).ToList());
         }
 
         

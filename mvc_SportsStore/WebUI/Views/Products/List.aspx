@@ -13,5 +13,9 @@
          <h4><%= product.Price.ToString("c")%></h4>
 <%	} %>
 <h2></h2>
+<div class="pager">
+    Page :
+    <%= Html.PageLinks((int)ViewData["CurrentPage"], (int)ViewData["TotalData"], x => Url.Action("List", new {page = x})) %>
+</div>
 
 </asp:Content>
