@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
+using Castle.Core;
 using Castle.Core.Resource;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
@@ -31,8 +32,10 @@ namespace WebUI
 
             foreach (Type t in controllerTypes)
             {
-                // container.AddComponentWithLifestyle(t.FullName, t, LifeStyleType.Transient);
-                container.Register(Component.For<Type>().LifeStyle.Transient);
+                //container.AddComponentWithLifestyle(t.FullName, t, LifeStyleType.Transient);
+                //container.AddComponentLifeStyle(t.FullName, t, LifestyleType.Transient);
+                //container.Register(Component.For<Type>().LifeStyle.Transient);
+                
             }
         }
 
