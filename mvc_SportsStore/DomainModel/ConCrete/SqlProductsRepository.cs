@@ -17,7 +17,7 @@ namespace DomainModel.ConCrete
         }
         public IQueryable<Product> Products
         {
-            get { return productTable; }
+            get { return productsTable; }
         }
     }
 }

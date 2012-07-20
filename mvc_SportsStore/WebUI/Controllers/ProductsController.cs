@@ -11,10 +11,13 @@ namespace WebUI.Controllers
 {
     public class ProductsController : Controller
     {
+        private string connectionString = @"Server=.\SQLExpress;Database=SportsStore;Trusted_Connection=yes;";
+
         private IProductsRepository productsRepository;
         public ProductsController ()
         {
-            productsRepository = new FakeProductsRepository();
+            //productsRepository = new FakeProductsRepository();
+            productsRepository = new SqlProductsRepository(connectionString); // 140p
         }
 
         public ActionResult List()
