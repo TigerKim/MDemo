@@ -35,6 +35,9 @@ namespace WebUI
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            // 신규추가
+            ControllerBuilder.Current.SetControllerFactory(new WinsorControlerFactory());
         }
     }
 }
