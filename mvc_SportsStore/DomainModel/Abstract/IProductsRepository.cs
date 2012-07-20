@@ -6,12 +6,8 @@ using DomainModel.Entities;
 
 namespace DomainModel.Abstract
 {
-    public interface IProductsRespository 
+    public interface IProductsRepository 
     {
         IQueryable<Product> Products { get; }
-    }
-
-    public class IProductRepository
-    {
     }
 }

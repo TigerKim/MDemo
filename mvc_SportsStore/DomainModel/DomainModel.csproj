@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IProductRespository.cs" />
+    <Compile Include="Abstract\IProductsRespository.cs" />
     <Compile Include="ConCrete\FakeProductsRepository.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

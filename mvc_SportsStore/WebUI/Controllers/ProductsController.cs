@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DomainModel.ConCrete;
 using DomainModel.Abstract;
 
 
@@ -10,17 +11,15 @@ namespace WebUI.Controllers
 {
     public class ProductsController : Controller
     {
-        //
-        // GET: /Products/
-        private IProductRepository productRepository;
+        private IProductsRepository productsRepository;
         public ProductsController ()
         {
-            productRepository = new FakeProductRepository();
+            productsRepository = new FakeProductsRepository();
         }
 
         public ActionResult List()
         {
-            return View(productRepository.Products.ToList());
+            return View(productsRepository.Products.ToList());
         }
 
         

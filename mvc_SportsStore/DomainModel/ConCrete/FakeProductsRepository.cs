@@ -7,7 +7,7 @@ using DomainModel.Entities;
 
 namespace DomainModel.ConCrete
 {
-    public class FakeProductsRepository : IProductsRespository
+    public class FakeProductsRepository : IProductsRepository
     {
         private static IQueryable<Product> fakeProducts = new List<Product>
                                                     {
